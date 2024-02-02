@@ -7,7 +7,11 @@ function Toggle() {
     setIsOn((buttonOff) => !buttonOff);
   }
 
-  return <button onClick={eventHandler}>{buttonOff ? "ON" : "OFF"}</button>;
+  const color = buttonOff ? "red": "white"
+
+
+  return <button 
+  style={{ background: color }}  onClick={eventHandler}>{buttonOff ? "ON" : "OFF"}</button>;
 }
 
 export default Toggle;
